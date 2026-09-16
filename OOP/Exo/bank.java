@@ -1,11 +1,3 @@
-public class bank {
-
-    public static void main(String[] args) {
-        
-    }
-}
-
-
 class Bank {
 
     String accountNumber;
@@ -22,5 +14,8 @@ class Bank {
 
     void checkBalance() {
         System.out.println("Balance: " + balance);
+    }
+    public static void main(String[] args) {
+        
     }
 }
