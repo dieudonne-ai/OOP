@@ -1,4 +1,4 @@
-public class Course {
+class Course {
 
     String courseName;                    // Instance variable
     int registeredStudents;              // Instance variable
@@ -26,21 +26,23 @@ public class Course {
         );
     }
 
-    public static void main(String[] args) {
+    public class Main {
+        public static void main(String[] args) {
 
-        Course oop = new Course(
-                "Applied Object-Oriented Programming", 45);
+            Course oop = new Course(
+                    "Applied Object-Oriented Programming", 45);
 
-        Course networks = new Course(
-                "Computer Networks", 40);
+            Course networks = new Course(
+                    "Computer Networks", 40);
 
-        Course algorithms = new Course(
-                "Data Structures & Algorithms", 35);
+            Course algorithms = new Course(
+                    "Data Structures & Algorithms", 35);
 
-        oop.displayStatistics(42);
-        networks.displayStatistics(36);
-        algorithms.displayStatistics(30);
+            oop.displayStatistics(42);
+            networks.displayStatistics(36);
+            algorithms.displayStatistics(30);
 
-        displayUniversityStatistics();
+            displayUniversityStatistics();
+        }
     }
 }
