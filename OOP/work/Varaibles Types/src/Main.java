@@ -14,7 +14,7 @@ class Course {
         double attendancePercentage =
                 (attendedStudents * 100.0) / registeredStudents; // Local variable
 
-        System.out.println("Course: " + courseName);
+        System.out.println("Main: " + courseName);
         System.out.println("Registered Students: " + registeredStudents);
         System.out.printf("Attendance: %.2f%%%n", attendancePercentage);
         System.out.println();
@@ -25,24 +25,23 @@ class Course {
                 "Total Students Across All Courses: " + totalStudents
         );
     }
+}
 
-    public class Main {
-        public static void main(String[] args) {
+public class Main {
+    public static void main(String[] args) {
+        Course oop = new Course(
+                "Applied Object-Oriented Programming", 45);
 
-            Course oop = new Course(
-                    "Applied Object-Oriented Programming", 45);
+        Course networks = new Course(
+                "Computer Networks", 40);
 
-            Course networks = new Course(
-                    "Computer Networks", 40);
+        Course algorithms = new Course(
+                "Data Structures & Algorithms", 35);
 
-            Course algorithms = new Course(
-                    "Data Structures & Algorithms", 35);
+        oop.displayStatistics(42);
+        networks.displayStatistics(36);
+        algorithms.displayStatistics(30);
 
-            oop.displayStatistics(42);
-            networks.displayStatistics(36);
-            algorithms.displayStatistics(30);
-
-            displayUniversityStatistics();
-        }
+        Course.displayUniversityStatistics();
     }
 }
